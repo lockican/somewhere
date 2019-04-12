@@ -1,0 +1,100 @@
+@tablet-width: 768px;
+@desktop-width: 1300px;
+@mobile-width-only: 767px;
+
+@font-face  {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../font/open-sans-regular.woff2') format('woff2'), 
+       url('../font/open-sans-regular.woff') format('woff');
+}
+
+@font-face  {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('../font/open-sans-bold.woff2') format('woff2'), 
+       url('../font/open-sans-bold.woff') format('woff');
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  
+  font-size: 17px;
+  line-height: 20px;
+  font-family: 'Open Sans';
+  color: #000000;
+
+  overflow-x:hidden;
+}
+
+h2 {
+  margin: 0;
+
+  font-size: 25px;
+  line-height: 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+p {
+  margin: 0;
+}
+
+.button {
+  padding: 14px 0;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444444;
+  text-transform: uppercase;
+
+  border: 2px solid #444444;
+  background-color: transparent;
+  &:hover{
+    color: #ffffff;
+
+    background-color: #444444;
+  }
+
+  &:active{
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img{
+  height: auto;
+  
+  border: none;
+}

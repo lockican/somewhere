@@ -1,0 +1,151 @@
+.contacts__wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.contacts__title{
+  margin: 0;
+  padding-top: 39px;
+  padding-bottom: 28px;
+
+  font-size: 18px;
+}
+
+.contacts__block-address{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-style: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.contacts__right-value{
+  width: 180px;
+
+  &:nth-child(2){
+    margin-bottom: 25px;
+  }
+}
+
+.contacts__link{
+  order: 1;
+  margin: 39px 0;
+}
+
+.contacts__link--desktop{
+  display: none;
+}
+
+.contacts__link--mail{
+  color: #444444;
+  border-bottom: 1px solid #62d1ba;
+  padding-bottom: 5px;
+
+  &:hover{
+    color: #46c1ae;
+  }
+  &:active{
+    opacity: 0.3;
+  }
+
+   
+}
+
+.contacts__link--mobile-tablet{
+  width: 256px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+}
+
+@media(min-width: @tablet-width){
+  .contacts__wrapper{
+    width: 668px;
+  }
+
+  .contacts__block-address{
+    padding-bottom: 50px;
+  }
+
+  .contacts__title{
+    position: relative;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after{
+      position: absolute;
+      content: '';
+      right: 3px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url(../img/icon-flag.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .contacts__block-address{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .contacts__right-value{
+    margin-left: 24px;
+    margin-right: 56px;
+
+    &:nth-child(4){
+      width: 200px;
+      margin-left: 27px;
+      margin-right: 38px;
+    }
+  }
+
+  .contacts__link--mobile-tablet{
+    margin-bottom: 57px;
+    width: 226px;
+  }
+}
+
+@media(min-width: @desktop-width){
+  .contacts{
+    display: flex;
+    width: 1050px;
+    height: 633px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrapper{
+    width: 525px;
+    height: 528px;
+  }
+
+  .contacts__title,
+  .contacts__block-address{
+    padding-left: 175px;
+  }
+
+  .contacts__title{
+    padding-top: 75px;
+    &::after{
+      left: 63px;
+    }
+  }
+
+  .contacts__link--desktop{
+    display: block;
+    width: 230px;
+    margin: 0;
+    margin-top: auto;
+    margin-left: 175px;
+  }
+
+  .contacts__link--mobile-tablet{
+    display: none;
+  }
+}
