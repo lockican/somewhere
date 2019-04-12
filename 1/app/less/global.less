@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'),
+         url('../fonts/oswald-v16-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/oswald-v16-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Oswald Medium'), local('Oswald-Medium'),
+         url('../fonts/oswald-v16-cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/oswald-v16-cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+   
+  @tablet-width: 768px;
+  @desktop-width: 1300px;
+  @mobile-width-only: 767px;
+  
+  body{
+      min-width: 320px;
+      min-height: 100vh;
+      font-family:'Arial' , sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 24px;
+      color: #444444;
+      font-style: normal;
+      overflow-x: hidden;
+  }
+  
+  ul{
+      padding: 0;
+      margin: 0;
+      list-style:none;
+  }
+  
+  h2 {
+      font-family: 'Oswald','Arial' , sans-serif;
+      font-size: 36px;
+      line-height: 36px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  h3,p{
+      margin: 0;
+  }
+  
+  a{
+      text-decoration: none;
+      color: #444444;
+  }
+   
+  
+  .visually-hidden:not(:focus):not(:active),
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .button {
+    font-family: 'Oswald';
+    background-color: #68b738;
+    color: #ffffff;
+    padding: 10px 0;
+    display: block;
+    text-transform: uppercase;
+      &:hover{
+        background-color: #5eaa2f;
+      }
+      &:active{
+        color: rgba(255,255,255,0.3);
+      }
+  }

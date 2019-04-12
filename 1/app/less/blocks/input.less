@@ -1,0 +1,45 @@
+.input-radio + label{
+  position: relative;
+  
+	font-family: 'Oswald';
+	text-transform: uppercase;
+  color: #222222;
+  
+  cursor: pointer;
+
+	&::before{
+		content: "";
+		position: absolute;
+    left: -46px;
+    
+		width: 28px;
+    height: 28px;
+    
+		border: 1px solid #cecece;
+		border-radius: 50%;
+	}
+}
+
+.input-radio:checked + label{
+	&::after{
+		content: "";
+		position: absolute;
+		left: -37px;
+    top: 9px;
+    
+		width: 12px;
+    height: 12px;
+    
+		border-radius: 50%;
+		background-color: #68b738;
+	}
+}	
+
+@media(min-width: @tablet-width){
+  .input-radio:checked + label{
+    &::after{
+      left: -37px;
+      top: 12px;
+    }
+  }
+}

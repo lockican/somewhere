@@ -1,0 +1,163 @@
+.additionally {
+  margin: 0;
+  padding:0 20px;
+  
+	border: none;
+}
+
+.additionally__title {
+  position: relative;
+
+  margin-bottom: 25px;
+  width: 100%;
+
+	font-family: 'Oswald';
+  font-size: 24px;
+  color: #111111;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 164px;
+
+    width: 100vw;
+    height: 3px;
+
+    background-color: #68b738;
+  }
+}
+
+.additionally__item {
+  margin-bottom: 13px;
+  padding-left: 46px;
+  
+	text-transform: uppercase;
+	font-family: 'Oswald';
+	color: #222222;
+}
+
+.additionally__checkbox + label{
+	position: relative;
+
+	font-family: 'Oswald';
+	text-transform: uppercase;
+  color: #222222;
+  
+  cursor: pointer;
+
+	&::before{
+		content: "";
+		position: absolute;
+		left: -46px;
+    top: -3px;
+    
+		width: 28px;
+		height: 28px;
+		border: 1px solid #cecece;
+	}
+}
+
+.additionally__checkbox:checked + label{
+	&::after{
+  	content: "";
+    position: absolute;
+    left: -41px;
+    top: 4px;
+
+    width: 21px;
+    height: 16px;
+
+    background-image: url(../img/icon-tick.svg);
+    background-repeat: no-repeat;
+	}
+}
+
+.additionally__button {
+	width: 100%;
+	margin-top: 26px;
+  margin-bottom: 20px;
+  
+  border: none;
+}
+
+.additionally__mandatory-field {
+	text-align: center;
+	font-size: 14px;
+}
+
+@media(min-width: @tablet-width){
+	.additionally {
+    padding-left: 70px;
+    padding-right: 37px;
+	}
+
+	.additionally__title{
+    padding-top: 40px;
+    padding-bottom: 30px;	
+
+		font-size: 36px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 56px;
+      right: 700px;
+
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+    }
+    &::after{
+      top: 56px;
+      left: 255px;
+    }
+	}
+
+	.additionally__list{
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  }
+
+  .additionally__item{
+  	width: 239px;
+  }
+
+  .additionally__submit{
+  	display: flex;
+  }
+
+  .additionally__button{
+  	width: 283px;
+  }
+	
+  .additionally__mandatory-field{
+    padding-left: 60px;
+    
+  	align-self: center;
+  	font-size: 16px;
+  }
+}
+
+@media(min-width: @desktop-width){
+	.additionally{
+		padding: 0;
+	}
+
+	.additionally__title{
+		&::before{
+			right: 1250px;
+		}
+	}
+
+	.additionally__list{
+		justify-content: flex-start;
+	}
+
+	.additionally__item{
+		width: 255px;
+	}
+
+	.additionally__button {
+		width: 570px;
+	}
+}
